@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	margin: 0;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight: 400;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+header{
+	background: #00a0d5;
+}
+
+header::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo{
+	float: left
+}
+
+nav{
+	margin-right: 50px;
+	float: right;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-left: 50px;
+	padding-top: 50px;
+	
+	position: relative;
+}
+
+nav a{
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+nav a:hover{
+	color:#D5EDEF;
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	width: 0%;
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
